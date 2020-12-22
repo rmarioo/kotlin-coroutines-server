@@ -11,3 +11,15 @@ To run a server (by default uses netty on port 8087):
 ```bash
 $ ./gradlew bootRun
 ```
+
+To increase the max number of files opened do something like this  
+
+```
+sudo sysctl -w kern.maxfiles=1000000
+sudo sysctl -w kern.maxfilesperproc=1000000
+```
+
+This change is temporary see more info here https://superuser.com/questions/433746/is-there-a-fix-for-the-too-many-open-files-in-system-error-on-os-x-10-7-1
+
+
+
