@@ -12,6 +12,13 @@ To run a server (by default uses netty on port 8087):
 $ ./gradlew bootRun
 ```
 
+Note check max open file number
+
+```
+sysctl kern.maxfiles
+sysctl kern.maxfilesperproc
+```
+
 To increase the max number of files opened do something like this  
 
 ```
